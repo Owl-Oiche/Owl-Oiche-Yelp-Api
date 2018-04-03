@@ -1,0 +1,29 @@
+{
+  "name": "owl-oiche-yelp-api",
+  "version": "1.0.0",
+  "description": "Yelp API backend for Owl Oiche native app",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "start:dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Owl-Oiche/Owl-Oiche-Yelp-Api.git"
+  },
+  "author": "",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Owl-Oiche/Owl-Oiche-Yelp-Api/issues"
+  },
+  "homepage": "https://github.com/Owl-Oiche/Owl-Oiche-Yelp-Api#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "nodemon": "^1.17.3"
+  }
+}

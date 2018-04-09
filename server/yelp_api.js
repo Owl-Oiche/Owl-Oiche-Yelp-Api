@@ -22,8 +22,8 @@ const yelpIdSearch = (id) => axios({
   headers: { Authorization: `Bearer ${API_KEY}` },
 })
   .then(result => {
-    console.log('result -----> ', result);
-    return { data: result.data.businesses };
+    // console.log('result -----> ', result);
+    return { data: result.data };
   })
   .catch(err => {
     throw err;

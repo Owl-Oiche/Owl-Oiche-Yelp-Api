@@ -16,8 +16,21 @@ const yelp = (obj) => axios({
     throw err;
   });
 
+const yelpIdSearch = (id) => axios({
+  method: 'GET',
+  url: `https://api.yelp.com/v3/businesses/${id}`,
+  headers: { Authorization: `Bearer ${API_KEY}` },
+})
+  .then(result => {
+    return { data: result.data.businesses };
+  })
+  .catch(err => {
+    throw err;
+  });
+
 const yelpApi = {
   search: (options) => yelp(options),
+  idSearch: (id) => yelpIdSearch(id),
 };
 
 module.exports = yelpApi;

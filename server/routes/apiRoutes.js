@@ -8,7 +8,7 @@ router.get('/yelpResults', (req, res) => {
 });
 
 router.get('/yelpIdResults', (req, res) => {
-  return yelpApi.search(req.query.id)
+  return yelpApi.idSearch(req.query.id)
     .then(response => res.json(response.data))
     .catch(err => res.json(err.message));
 });

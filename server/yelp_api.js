@@ -9,9 +9,7 @@ const yelp = (obj) => axios({
   url: `https://api.yelp.com/v3/businesses/search${makeQuery(obj)}`,
   headers: { Authorization: `Bearer ${API_KEY}` },
 })
-  .then(result => {
-    return { data: result.data.businesses };
-  })
+  .then(result => { data: result.data.businesses })
   .catch(err => {
     throw err;
   });
@@ -21,10 +19,7 @@ const yelpIdSearch = (id) => axios({
   url: `https://api.yelp.com/v3/businesses/${id}`,
   headers: { Authorization: `Bearer ${API_KEY}` },
 })
-  .then(result => {
-    // console.log('result -----> ', result);
-    return { data: result.data };
-  })
+  .then(result => { data: result.data })
   .catch(err => {
     throw err;
   });

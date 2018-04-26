@@ -18,7 +18,8 @@ router.get('/yelpIdResults', (req, res) => {
 });
 
 router.get('/googleMaps', (req, res) => {
-  return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=${GOOGLE_MAPS_KEY}`)
+  const { lat, lng } = req.query;
+  return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${GOOGLE_MAPS_KEY}`)
     .then(response => response.data)
     .then(data => res.json(data.results[0].formatted_address))
     .catch(err => res.json(err.message));
